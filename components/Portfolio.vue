@@ -158,10 +158,10 @@ export default {
           type: ["Front End"],
           picture: "antoine.png",
           tech: "Vue.js, Nuxt.js",
-          site: "",
-          git: "",
+          site: "https://antoineparat.io",
+          git: "https://github.com/AntoineParat/antoineparat.io",
           description: "A fully functional portfolio site using Nuxt.js.",
-          date: ""
+          date: "27/08/2019"
         },
         {
           name: "Feed-reader",
@@ -282,10 +282,10 @@ export default {
           type: ["Front End"],
           picture: "antoine.png",
           tech: "Vue.js, Nuxt.js",
-          site: "",
-          git: "",
+          site: "https://antoineparat.io",
+          git: "https://github.com/AntoineParat/antoineparat.io",
           description: "A fully functional portfolio site using Nuxt.js.",
-          date: ""
+          date: "27/08/2019"
         },
         {
           name: "Feed-reader",
@@ -443,10 +443,10 @@ export default {
           type: ["Front End"],
           picture: "antoine.png",
           tech: "Vue.js, Nuxt.js",
-          site: "",
-          git: "",
+          site: "https://antoineparat.io",
+          git: "https://github.com/AntoineParat/antoineparat.io",
           description: "A fully functional portfolio site using Nuxt.js.",
-          date: ""
+          date: "27/08/2019"
         },
         {
           name: "Feed-reader",
