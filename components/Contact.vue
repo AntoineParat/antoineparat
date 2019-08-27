@@ -70,7 +70,7 @@ export default {
   methods: {
     post() {
       this.$axios
-        .post("/api/mail", {
+        .post('/api/mail', {
           user: this.user,
           email: this.email,
           message: this.message
