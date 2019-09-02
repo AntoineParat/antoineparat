@@ -87,7 +87,7 @@ export default {
       //     }
       //   })
       this.$axios
-        .post('/api/mail', {
+        .post('http://antoineparat.io/api/mail', {
           user: this.user,
           email: this.email,
           message: this.message

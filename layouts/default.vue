@@ -10,7 +10,6 @@
 <style>
 html {
   background-color: #ffffff;
-  scroll-behavior: smooth;
 }
 .button {
   margin: auto;

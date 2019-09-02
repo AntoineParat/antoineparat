@@ -3,7 +3,7 @@
     <h5 class="has-text-centered">ABOUT</h5>
     <div class="container">
       <div class="columns">
-        <div class="column is-half justify">
+        <div class="column is-half justify" data-aos="fade-right">
           <h6>WHO AM I ?</h6>
           <br/>
           <p>I can't stand to stop learning new concepts. That's why i'm in a constant improvement.</p>
@@ -34,7 +34,7 @@
             </li>
           </ul>
         </div>
-        <div class="column is-half justify">
+        <div class="column is-half justify" data-aos="fade-left">
           <h6>MY SKILLS</h6>
           <br/>
           <p>I'm a full stack JavaScript developer using a MEVN stack <strong>(MongoDB, Express, Vue, Node) </strong>.</p>

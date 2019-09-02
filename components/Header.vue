@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header id='top' >
     <div class="overlay">
       <div class="container has-text-centered">
         <figure class="image">
@@ -10,7 +10,7 @@
           <span :style="{borderBottom: '3px solid #cc005f'}">Antoine Parat</span>
         </h1>
         <p>FULL STACK JAVASCRIPT DEVELOPER</p>
-        <a href="#portfolio" class="button is-rounded is-medium">Hire me !</a>
+        <a data-scroll href="#portfolio" class="button is-rounded is-medium">Hire me !</a>
       <div class="is-flex medias">
         <a>  <i class="fab fa-linkedin-in fa-3x"></i> </a>
         <a target="_blank" href="https://github.com/AntoineParat">  <i class="fab fa-github fa-3x"></i></a>
@@ -22,7 +22,8 @@
 </template>
 
 <script>
-export default {};
+export default {
+};
 </script>
 
 <style scoped>

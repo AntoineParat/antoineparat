@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <h5 class="has-text-centered">RESUME</h5>
-    <div class="timeline-container">
+    <div data-aos="fade-right" class="timeline-container">
       <div
         v-for="(project, index) in timeline"
         :key="index"
@@ -9,8 +9,10 @@
       >
         <div class="marker"></div>
         <div class="timeline-content">
-          <p style="fontSize : 1.1rem">{{project.date}}</p>
-          <h3> <a target="_blank" :href="project.website" v-html="project.name"> </a></h3>
+          <p style="fontSize : 1.1rem">{{project.date}} </p>
+          <h3>
+            <a target="_blank" :href="project.website" v-html="project.name"></a>
+          </h3>
           <p style="direction : ltr;">{{project.content}}</p>
         </div>
       </div>
@@ -24,34 +26,36 @@ export default {
     return {
       timeline: [
         {
-          sortByDate: new Date("2015Z"),
-          date: "2015",
-          name: "CAPES Sciences Ecocomiques et Sociales",
-          content: "Economics' teacher certification",
-        },
-         {
-          sortByDate: new Date("2016Z"),
-          date: "2016",
-          name: "Master’s degree",
-          content: "Education, Teaching and Training. University of Poitiers.",
+          sortByDate: new Date("2019Z"),
+          date: "2019",
+          name: "Full stack JavaScript developer <i class='em em-rocket'></i> ",
+          content: "A world of new exciting things!"
         },
         {
           sortByDate: new Date("2017Z"),
           date: "2016-2018",
           name: "Economics teacher",
-          content: "High School teacher at Education Nationale",
+          content: "High School teacher at Education Nationale"
         },
         {
-          sortByDate: new Date("2019Z"),
-          date: "2019",
-          name: "Full stack JavaScript developer <i class='em em-rocket'></i> ",
-          content: "A world of new exciting things!",
+          sortByDate: new Date("2016Z"),
+          date: "2016",
+          name: "Master’s degree",
+          content: "Education, Teaching and Training. University of Poitiers."
         },
+        {
+          sortByDate: new Date("2015Z"),
+          date: "2015",
+          name: "CAPES Sciences Ecocomiques et Sociales",
+          content: "Economics' teacher certification"
+        }
       ]
     };
   },
   mounted() {
-    this.$axios.get('https://api.github.com/users/antoineparat/repos')
+    AOS.init();
+    this.$axios
+      .get("https://api.github.com/users/antoineparat/repos")
       .then(response => {
         response.data.forEach(element => {
           if (element.created_at === "2019-07-27T17:30:08Z") {
@@ -59,7 +63,7 @@ export default {
             element.sortByDate = "2019-02-22T17:10:36Z";
           }
           const date = moment(element.created_at).format("L");
-          this.timeline.push({
+          this.timeline.unshift({
             sortByDate: new Date(element.created_at),
             date: date,
             name: element.name,
@@ -82,8 +86,8 @@ export default {
 section {
   padding-top: 1px;
 }
-a{
-  color: #CD405F;
+a {
+  color: #cd405f;
 }
 .timeline-container {
   width: 80%;

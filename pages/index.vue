@@ -5,7 +5,7 @@
     <About />
     <Timeline />
     <Contact />
-    <button @click="topFunction" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+    <a data-scroll href="#top" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></a>
   </div>
 </template>
 
@@ -32,6 +32,8 @@ export default {
     }
   },
   mounted() {
+    AOS.init();
+    var scroll = new SmoothScroll('a[href*="#"]');
     window.onscroll = function() {
       if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
         document.getElementById("myBtn").style.display = "block";

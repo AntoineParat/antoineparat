@@ -12,20 +12,33 @@ export default {
       {
         hid: "description",
         name: "Antoine Parat",
-        content: "I'm Antoine Parat, a full stack JavaScript web developer in Poitiers, France."
+        content:
+          "I'm Antoine Parat, a full stack JavaScript web developer in Poitiers, France."
       },
 
       // Twitter Card data
-      {name: "twitter:title", content: "Antoine Parat" },
-      {name:"twitter:description", content: "Full stack Javascript developer. Poitier."},
-      {name: "twitter:image", content: "https://antoineparat.io/img/myAvatar.png" },
-      { name: "twitter:card", content: "https://antoineparat.io/img/myAvatar.png"},
+      { name: "twitter:title", content: "Antoine Parat" },
+      {
+        name: "twitter:description",
+        content: "Full stack Javascript developer. Poitier."
+      },
+      {
+        name: "twitter:image",
+        content: "https://antoineparat.io/img/myAvatar.png"
+      },
+      {
+        name: "twitter:card",
+        content: "https://antoineparat.io/img/myAvatar.png"
+      },
 
       // Open Graph data
       { property: "og:title", content: "Antoine Parat" },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://antoineparat.io" },
-      { property: "og:image", content: "https://antoineparat.io/img/myAvatar.png" },
+      {
+        property: "og:image",
+        content: "https://antoineparat.io/img/myAvatar.png"
+      },
       {
         property: "og:description",
         content: "Full stack Javascript developer. Poitier."
@@ -39,7 +52,12 @@ export default {
       {
         src:
           "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/fr.js"
-      }
+      },
+      {
+        src:
+          "https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"
+      },
+      { src: "https://unpkg.com/aos@2.3.1/dist/aos.js" }
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
@@ -51,7 +69,11 @@ export default {
         href: "https://use.fontawesome.com/releases/v5.2.0/css/all.css",
         rel: "stylesheet"
       },
-      { href: "https://afeld.github.io/emoji-css/emoji.css", rel: "stylesheet" }
+      {
+        href: "https://afeld.github.io/emoji-css/emoji.css",
+        rel: "stylesheet"
+      },
+      { href: "https://unpkg.com/aos@2.3.1/dist/aos.css", rel: "stylesheet"}
     ]
   },
   /*
@@ -82,9 +104,9 @@ export default {
 
   serverMiddleware: ["~/api/index.js"],
 
-  axios: {
-    baseURL: process.env.BASE_URL || "http://localhost:3000"
-  },
+  // axios: {
+  //   baseURL: process.env.BASE_URL || "http://localhost:3000"
+  // },
   /*
    ** Build configuration
    */
