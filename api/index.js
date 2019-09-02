@@ -24,16 +24,16 @@ app.post('/mail', async (req, res) => {
             `
           });
         res.send({success : "Email has been sent"})
-        // sgMail.send({
-        //     to: req.body.email,
-        //     from: "paratantoine@gmail.com",
-        //     subject: `Hello ${req.body.user}`,
-        //     html: ` <p>Hello ${req.body.user},</p>
-        //             <p>Thank you for your email !  I will respond to you as soon as possible.</p>
-        //             <p>See you;</p>
-        //             <p>Antoine</p>
-        //             `
-        //   });
+        sgMail.send({
+            to: req.body.email,
+            from: "contact@antoineparat.com",
+            subject: `Hello ${req.body.user}`,
+            html: ` <p>Hello ${req.body.user},</p>
+                    <p>Thank you for your email !  I will respond to you as soon as possible.</p>
+                    <p>See you;</p>
+                    <p>Antoine Parat</p>
+                    `
+          });
     } catch (err) {
         console.log(err)
         res.send({error : "An error occured, please try again later"})
