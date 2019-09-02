@@ -161,7 +161,7 @@ export default {
           site: "https://antoineparat.io",
           git: "https://github.com/AntoineParat/antoineparat.io",
           description: "A fully functional portfolio site using Nuxt.js.",
-          date: "27/08/2019"
+          date: "28/08/2019"
         },
         {
           name: "Feed-reader",
@@ -285,7 +285,7 @@ export default {
           site: "https://antoineparat.io",
           git: "https://github.com/AntoineParat/antoineparat.io",
           description: "A fully functional portfolio site using Nuxt.js.",
-          date: "27/08/2019"
+          date: "28/08/2019"
         },
         {
           name: "Feed-reader",
@@ -446,7 +446,7 @@ export default {
           site: "https://antoineparat.io",
           git: "https://github.com/AntoineParat/antoineparat.io",
           description: "A fully functional portfolio site using Nuxt.js.",
-          date: "27/08/2019"
+          date: "28/08/2019"
         },
         {
           name: "Feed-reader",

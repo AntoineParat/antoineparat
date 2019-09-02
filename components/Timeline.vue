@@ -51,8 +51,7 @@ export default {
     };
   },
   mounted() {
-    this.$axios
-      .get("https://api.github.com/users/antoineparat/repos")
+    this.$axios.get('https://api.github.com/users/antoineparat/repos')
       .then(response => {
         response.data.forEach(element => {
           if (element.created_at === "2019-07-27T17:30:08Z") {

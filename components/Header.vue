@@ -3,7 +3,7 @@
     <div class="overlay">
       <div class="container has-text-centered">
         <figure class="image">
-          <img class="is-rounded" src="../assets/myAvatar.png" />
+          <img class="is-rounded" src="/img/myAvatar.png" />
         </figure>
         <h1>
           I'm

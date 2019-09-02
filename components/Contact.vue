@@ -47,11 +47,17 @@
           </div>
         </div>
       </form>
-      <br>
+      <br />
       <div class="is-flex medias">
-        <a><i class="fab fa-linkedin-in fa-2x"></i> </a>
-        <a target="_blank" href="https://github.com/AntoineParat">  <i class="fab fa-github fa-2x"></i></a>
-        <a target="_blank" href="mailto:paratantoine@gmail.com"> <i class="fas fa-envelope fa-2x"></i> </a>
+        <a>
+          <i class="fab fa-linkedin-in fa-2x"></i>
+        </a>
+        <a target="_blank" href="https://github.com/AntoineParat">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+        <a target="_blank" href="mailto:paratantoine@gmail.com">
+          <i class="fas fa-envelope fa-2x"></i>
+        </a>
       </div>
       <p id="copyrigth" class="has-text-centered">© Antoine Parat 2019</p>
     </div>
@@ -69,6 +75,17 @@ export default {
   },
   methods: {
     post() {
+      // this.$axios
+      //   .post("https://api.emailjs.com/api/v1.0/email/send", {
+      //     service_id: "sendgrid",
+      //     template_id: "template_rHAz7gyN",
+      //     user_id: process.env.EMAIL_JS,
+      //     template_params: {
+      //       user: this.user,
+      //       email: this.email,
+      //       message: this.message
+      //     }
+      //   })
       this.$axios
         .post('/api/mail', {
           user: this.user,
@@ -77,17 +94,16 @@ export default {
         })
         .then(resp => {
           this.user = this.email = this.message = null;
-          if(!resp.data.error) {
+          if (!resp.data.error) {
             this.success(resp.data.success);
-          }
-          else {
+          } else {
             this.error(resp.data.error);
           }
-          })
-          .catch(error =>{
-            this.user = this.email = this.message = null;
-            this.error('An error occured, please try again later')
-          })
+        })
+        .catch(error => {
+          this.user = this.email = this.message = null;
+          this.error("An error occured, please try again later");
+        });
     },
     success(message) {
       this.$buefy.toast.open({
@@ -104,7 +120,7 @@ export default {
         position: "is-bottom",
         type: "is-danger"
       });
-    }
+    },
   }
 };
 </script>
@@ -140,18 +156,18 @@ form {
   width: 200px;
   margin: auto;
   justify-content: space-between;
-  margin-top : 50px;
+  margin-top: 50px;
 }
 .medias a {
-  color : white;
+  color: white;
 }
 .medias a:hover {
-  color : #cc005f;
+  color: #cc005f;
   transition-delay: 100ms;
   transition-property: color;
 }
 #copyrigth {
-  color : white;
-  margin-top : 40px;
+  color: white;
+  margin-top: 40px;
 }
 </style>
