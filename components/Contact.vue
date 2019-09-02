@@ -128,7 +128,7 @@ export default {
 <style scoped>
 section {
   background-color: #363636;
-  height: 800px;
+  height: 850px;
 }
 h5 {
   padding-top: 50px;

@@ -74,4 +74,9 @@ p {
   transition-delay: 100ms;
   transition-property: color;
 }
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 3.5em;
+  }
+}
 </style>
