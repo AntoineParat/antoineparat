@@ -3,7 +3,7 @@
     <div class="overlay">
       <div class="container has-text-centered">
         <figure class="image">
-          <img class="is-rounded" src="/img/myAvatar.png" />
+          <img class="is-rounded" src="img/myAvatar.png" />
         </figure>
         <h1>
           I'm
@@ -76,7 +76,11 @@ p {
 }
 @media screen and (max-width: 500px) {
   h1 {
-    font-size: 3.5em;
+    font-size: 2.5em;
   }
+  p {
+    font-size: 14px;
+    margin-top : 10px;
+    }
 }
 </style>

@@ -75,35 +75,48 @@ export default {
   },
   methods: {
     post() {
-      // this.$axios
-      //   .post("https://api.emailjs.com/api/v1.0/email/send", {
-      //     service_id: "sendgrid",
-      //     template_id: "template_rHAz7gyN",
-      //     user_id: process.env.EMAIL_JS,
-      //     template_params: {
-      //       user: this.user,
-      //       email: this.email,
-      //       message: this.message
-      //     }
-      //   })
       this.$axios
-        .post('http://antoineparat.io/api/mail', {
-          user: this.user,
-          email: this.email,
-          message: this.message
+        .post("https://api.emailjs.com/api/v1.0/email/send", {
+          service_id: "sendgrid",
+          template_id: "template_rHAz7gyN",
+          user_id: process.env.EMAIL_JS,
+          template_params: {
+            user: this.user,
+            email: this.email,
+            message: this.message
+          }
         })
         .then(resp => {
           this.user = this.email = this.message = null;
-          if (!resp.data.error) {
-            this.success(resp.data.success);
+          if (resp.status == 200) {
+            this.success("Email has been sent !");
           } else {
-            this.error(resp.data.error);
+            this.error("An error occured, please try again later");
           }
         })
         .catch(error => {
           this.user = this.email = this.message = null;
           this.error("An error occured, please try again later");
         });
+
+      // this.$axios
+      //   .post('http://antoineparat.io/api/mail', {
+      //     user: this.user,
+      //     email: this.email,
+      //     message: this.message
+      //   })
+      //   .then(resp => {
+      //     this.user = this.email = this.message = null;
+      //     if (!resp.data.error) {
+      //       this.success(resp.data.success);
+      //     } else {
+      //       this.error(resp.data.error);
+      //     }
+      //   })
+      //   .catch(error => {
+      //     this.user = this.email = this.message = null;
+      //     this.error("An error occured, please try again later");
+      //   });
     },
     success(message) {
       this.$buefy.toast.open({

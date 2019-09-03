@@ -3,8 +3,8 @@
     <Header />
     <Portfolio />
     <About />
-    <Timeline />
-    <Contact />
+    <Timeline :projects="project" />
+    <Contact /> 
     <a data-scroll href="#top" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></a>
   </div>
 </template>
@@ -16,6 +16,7 @@ import Portfolio from "~/components/Portfolio";
 import About from "~/components/About";
 import Timeline from "~/components/Timeline";
 import Contact from "~/components/Contact";
+import axios from "axios"
 export default {
   name: "HomePage",
 
@@ -29,10 +30,16 @@ export default {
   data() {
     return {
       scrollToTop: null,
+      project: 'default' 
     }
   },
+  asyncData (context) {
+    return axios.get("https://api.github.com/users/antoineparat/repos")
+    .then(resp => {
+      return {project : resp.data}
+    })
+  },
   mounted() {
-    AOS.init();
     var scroll = new SmoothScroll('a[href*="#"]');
     window.onscroll = function() {
       if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {

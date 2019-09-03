@@ -3,7 +3,7 @@
     <h5 class="has-text-centered">ABOUT</h5>
     <div class="container">
       <div class="columns">
-        <div class="column is-half justify" data-aos="fade-right">
+        <div class="column is-half justify">
           <h6>WHO AM I ?</h6>
           <br/>
           <p>I can't stand to stop learning new concepts. That's why i'm in a constant improvement.</p>
@@ -14,7 +14,7 @@
           <ul class="info-list">  
             <li>
               <p>Name:</p>
-              <span>Antoine Parat </span>
+              <span>Antoine Parat</span>
             </li>
             <li>
               <p>Place of birth: </p>
@@ -34,7 +34,7 @@
             </li>
           </ul>
         </div>
-        <div class="column is-half justify" data-aos="fade-left">
+        <div class="column is-half justify">
           <h6>MY SKILLS</h6>
           <br/>
           <p>I'm a full stack JavaScript developer using a MEVN stack <strong>(MongoDB, Express, Vue, Node) </strong>.</p>

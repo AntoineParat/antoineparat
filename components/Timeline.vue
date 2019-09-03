@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <h5 class="has-text-centered">RESUME</h5>
-    <div data-aos="fade-right" class="timeline-container">
+    <div  class="timeline-container">
       <div
         v-for="(project, index) in timeline"
         :key="index"
@@ -22,8 +22,10 @@
 
 <script>
 export default {
+  props : ["projects"],
   data() {
     return {
+      test : "first",
       timeline: [
         {
           sortByDate: new Date("2019Z"),
@@ -53,12 +55,32 @@ export default {
     };
   },
   mounted() {
-    AOS.init();
-    this.$axios
-      .get("https://api.github.com/users/antoineparat/repos")
-      .then(response => {
-        response.data.forEach(element => {
-          if (element.created_at === "2019-07-27T17:30:08Z") {
+    // this.$axios
+    //   .get("https://api.github.com/users/antoineparat/repos")
+    //   .then(response => {
+    //     response.data.forEach(element => {
+    //       if (element.created_at === "2019-07-27T17:30:08Z") {
+    //         element.created_at = "2019-02-22T17:10:36Z";
+    //         element.sortByDate = "2019-02-22T17:10:36Z";
+    //       }
+    //       const date = moment(element.created_at).format("L");
+    //       this.timeline.unshift({
+    //         sortByDate: new Date(element.created_at),
+    //         date: date,
+    //         name: element.name,
+    //         content: element.description,
+    //         link: element.html_url,
+    //         website: element.homepage
+    //       });
+    //     });
+    //   })
+    //   .then(() => {
+    //     this.timeline.sort(function(a, b) {
+    //       return b.sortByDate - a.sortByDate;
+    //     });
+    //   });
+    this.projects.forEach(element => {
+      if (element.created_at === "2019-07-27T17:30:08Z") {
             element.created_at = "2019-02-22T17:10:36Z";
             element.sortByDate = "2019-02-22T17:10:36Z";
           }
@@ -71,13 +93,10 @@ export default {
             link: element.html_url,
             website: element.homepage
           });
-        });
-      })
-      .then(() => {
-        this.timeline.sort(function(a, b) {
+    });
+    this.timeline.sort(function(a, b) {
           return b.sortByDate - a.sortByDate;
         });
-      });
   }
 };
 </script>
