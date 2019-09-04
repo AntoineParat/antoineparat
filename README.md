@@ -8,4 +8,4 @@ I built this portofolio website using Nuxt.js
 
 - Website is deployed and hosting with [Netify](https://www.netlify.com/).
 
-- As there is no Node.js server, i'm using the [EmailJS](https://www.emailjs.com/) API to send email.
+- As this is a serverless application, i'm using the [EmailJS](https://www.emailjs.com/) API to send email.
