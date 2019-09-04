@@ -42,7 +42,7 @@
               ></textarea>
             </div>
             <div class="control">
-              <button type="submit" class="button is-rounded is-medium">Submit</button>
+              <button type="submit" class="button is-rounded is-medium" :disabled="disabled">Submit</button>
             </div>
           </div>
         </div>
@@ -70,11 +70,13 @@ export default {
     return {
       user: null,
       email: null,
-      message: null
+      message: null,
+      disabled : false
     };
   },
   methods: {
     post() {
+      this.disabled = true;
       this.$axios
         .post("https://api.emailjs.com/api/v1.0/email/send", {
           service_id: "sendgrid",
@@ -88,6 +90,7 @@ export default {
         })
         .then(resp => {
           this.user = this.email = this.message = null;
+          this.disabled = false;
           if (resp.status == 200) {
             this.success("Email has been sent !");
           } else {
@@ -96,6 +99,7 @@ export default {
         })
         .catch(error => {
           this.user = this.email = this.message = null;
+          this.disabled = false;
           this.error("An error occured, please try again later");
         });
 
