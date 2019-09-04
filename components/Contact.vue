@@ -79,7 +79,7 @@ export default {
         .post("https://api.emailjs.com/api/v1.0/email/send", {
           service_id: "sendgrid",
           template_id: "template_rHAz7gyN",
-          user_id: process.env.EMAIL_JS,
+          user_id: "user_kw05fqkKt49NOOs2YG5rN",
           template_params: {
             user: this.user,
             email: this.email,
