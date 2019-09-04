@@ -1,6 +1,6 @@
 # Portfolio
 
-> I built this portofolio website using Nuxt.js
+I built this portofolio website using Nuxt.js
 
 # Under the hood 
 
