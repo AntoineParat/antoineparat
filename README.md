@@ -1,22 +1,11 @@
-# portfolio
+# Portfolio
 
-> My funkadelic Nuxt.js project
+> I built this portofolio website using Nuxt.js
 
-## Build Setup
+# Under the hood 
 
-``` bash
-# install dependencies
-$ npm run install
+- Nuxt.js has a built-in static website generator. My entire Nuxt.js app has been rendered as a static website.
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+- Website is deployed and hosting with [Netify](https://www.netlify.com/).
 
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+- As there is no Node.js server, i'm using the [EmailJS](https://www.emailjs.com/) API to send email.
