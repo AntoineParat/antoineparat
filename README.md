@@ -2,7 +2,7 @@
 
 I built this portofolio website using Nuxt.js
 
-![enter image description here](https://cosmic-s3.imgix.net/866be8d0-471e-11e8-9273-6f3edf3e559e-nuxt.png?w=500&auto=compress,format)
+![enter image description here](https://www.antoineparat.com/img/antoine.png)
 
 # Under the hood 
 
