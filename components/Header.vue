@@ -71,7 +71,7 @@ p {
 }
 .medias a:hover {
   color : #cc005f;
-  transition-delay: 99ms;
+  transition-delay: 100ms;
   transition-property: color;
 }
 @media screen and (max-width: 500px) {
