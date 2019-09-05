@@ -11,7 +11,7 @@ export default {
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         hid: "description",
-        name: "Antoine Parat",
+        name: "description",
         content:
           "I'm Antoine Parat, a full stack JavaScript web developer in Poitiers, France."
       },
