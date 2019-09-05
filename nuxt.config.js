@@ -15,6 +15,8 @@ export default {
         content:
           "I'm Antoine Parat, a full stack JavaScript web developer in Poitiers, France."
       },
+      // Google search
+      {name : "google-site-verification", content : "Bv03Ac5yAkQEPj_FpjwL9vqeHXjtTT6bkvR8DNti3uY"},
 
       // Twitter Card data
       { name: "twitter:title", content: "Antoine Parat" },
