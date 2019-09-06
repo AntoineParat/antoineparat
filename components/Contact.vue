@@ -49,7 +49,7 @@
       </form>
       <br />
       <div class="is-flex medias">
-        <a>
+        <a target="_blank" href="https://www.linkedin.com/in/antoine-parat/">
           <i class="fab fa-linkedin-in fa-2x"></i>
         </a>
         <a target="_blank" href="https://github.com/AntoineParat">
