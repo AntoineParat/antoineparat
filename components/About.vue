@@ -8,7 +8,7 @@
           <br/>
           <p>I can't stand to stop learning new concepts. That's why i'm in a constant improvement.</p>
           <p>In an appropriate environment i can learn as fast as a rocket. Which makes me super productive.</p>
-          <p>My current fields of interest are learning React Native and TensorFlow.</p>
+          <p>My current fields of interest are learning how to secure the Backend, developing serverless applications and React Native.</p>
           <p>I have a few different passions outside programming: spending time with friends and family, having fun with friends, druming & reading.</p>
           <br/>
           <ul class="info-list">  
