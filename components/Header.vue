@@ -12,7 +12,7 @@
         <p>FULL STACK JAVASCRIPT DEVELOPER</p>
         <a data-scroll href="#portfolio" class="button is-rounded is-medium">Hire me !</a>
       <div class="is-flex medias">
-        <a>  <i class="fab fa-linkedin-in fa-3x"></i> </a>
+        <a target="_blank" href="https://www.linkedin.com/in/antoine-parat/">  <i class="fab fa-linkedin-in fa-3x"></i> </a>
         <a target="_blank" href="https://github.com/AntoineParat">  <i class="fab fa-github fa-3x"></i></a>
         <a target="_blank" href="mailto:paratantoine@gmail.com"> <i class="fas fa-envelope fa-3x"></i> </a>
       </div>
